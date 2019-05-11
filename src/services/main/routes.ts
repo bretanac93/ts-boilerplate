@@ -2,14 +2,14 @@ import { Request, Response } from "express";
 
 export default [
   {
-    path: "/",
+    path: "/api/v1",
     method: "get",
     handler: [
-      async (req: Request, res: Response) => {
+      async ({ query }: Request, res: Response) => {
         res.send({
-          data: 'Hello World'
+          data: query.name ? `Hi ${query.name}!` : "Hello stranger",
         });
-      }
-    ]
-  }
+      },
+    ],
+  },
 ];
