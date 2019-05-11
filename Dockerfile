@@ -12,7 +12,7 @@ COPY tsconfig.json .
 
 RUN npm run prod
 
-FROM node:12-alpine as run-stage
+FROM node:12-alpine as prod-stage
 
 ENV APP_DIR=/app
 WORKDIR ${APP_DIR}

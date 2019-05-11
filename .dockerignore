@@ -3,5 +3,5 @@ dist
 .gitignore
 .git
 .env
-.env.dist
+.env.example
 yarn.lock

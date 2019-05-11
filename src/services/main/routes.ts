@@ -4,8 +4,12 @@ export default [
   {
     path: "/",
     method: "get",
-    handler: async (req: Request, res: Response) => {
-      res.send("Hello World");
-    }
+    handler: [
+      async (req: Request, res: Response) => {
+        res.send({
+          data: 'Hello World'
+        });
+      }
+    ]
   }
 ];
